@@ -1,0 +1,54 @@
+---
+title: Getting started
+description: "Welcome to the documentation for `abstract-python` library"
+---
+
+import { Steps, Aside } from "@astrojs/starlight/components";
+
+The `abstract-python` library is a Python SDK for APIs by [AbstractAPI](https://www.abstractapi.com/). It has helper classes
+that enable Python developers use these APIs without having to know the endpoints off-hand.
+
+It also does type validation on each request data before they're sent to the API server. This helps to manage credits, as each request costs a credit -
+whether successful or otherwise.
+
+This SDK currrently supports the **[Exchange Rates API](https://docs.abstractapi.com/exchange-rates)**,
+**[IP Geolocation API](https://docs.abstractapi.com/ip-geolocation)**, and the **[VAT API](https://docs.abstractapi.com/vat-validation)**.
+
+<Aside>
+  This isn't an official SDK by AbstractAPI but safe to use by anyone.
+</Aside>
+>
+
+## Installation
+
+Follow the steps below to install `abstract-python`:
+
+<Steps>
+
+1. Run the command below in your terminal to create a virtual environment
+
+   ```bash
+   virtualenv env
+   ```
+
+2. Activate the virtual environment
+
+   **Windows - using command prompt**
+
+   ```bash
+   .\env\Scripts\activate\
+   ```
+
+   **Unix/macOS using bash**
+
+   ```bash
+   source ./env/bin/activate
+   ```
+
+3. Run the command below to install `abstract-python`:
+
+   ```bash
+   pip install abstract-python
+   ```
+
+</Steps>
