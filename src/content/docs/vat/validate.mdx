@@ -1,0 +1,61 @@
+---
+title: Validate VAT numbers.
+description: "This endpoint allows you to validate a company's VAT number. It returns the company's data if the VAT number is valid"
+---
+
+## Description
+
+The `VatAPI.validate()` method is used to communicate with this endpoint as seen below:
+
+`VatAPI.validate(vat_number)`
+
+## Usage
+
+Below is a code snippet to query the `VatAPI.validate()` method:
+
+```python
+from abstract_python import VatAPI
+
+api_key = "your-vat-api-key"
+
+api = VatAPI(api_key)
+vat_number = "SE556656688001"
+response = api.validate(vat_number)
+
+print(response)
+
+```
+
+Below is the response object:
+
+```
+{
+    "vat_number": "SE556656688001",
+    "valid": true,
+    "company": {
+        "name": "GOOGLE SWEDEN AB",
+        "address": "GOOGLE IRLAND LTD \nM COLLINS, GORDON HOUSE \nBARROW STREET, DUBLIN 4 \nIRLAND"
+    },
+    "country": {
+        "code": "SE",
+        "name": "Sweden"
+    }
+}
+```
+
+## Error response
+
+If you entered an invalid VAT number in the query, you will get an error message as seen below:
+
+```
+{
+    'error': {
+        'message': 'A validation error occurred.',
+        'code': 'validation_error',
+        'details': {
+            'vat_number': ['Invalid VAT number']
+        }
+    },
+    'status': 400
+}
+```

@@ -1,0 +1,83 @@
+---
+title: Exchange API Overview
+description: "Fast and lightweight currency exchange API"
+---
+
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+The Exchange Rates API can be used to get real time exchange rates, past/historical rates, and perform quick currency conversion betwwen multiple currencies.
+It supports over 80+ currencies. In `abstract-python`, the `ExchangeRatesAPI` class is used to communicate with this API.
+
+## API endpoints
+
+<CardGrid>
+
+    <LinkCard
+        title="Real-time exchange rates"
+        href="/guides/i18n/"
+        description="Get real time exchange rates between multiple currencies."
+    />
+
+    <LinkCard
+        title="Convert currencies"
+        href="/guides/i18n/"
+        description="Covert one currency to another using a base amount. e.g 5 USD to GBP."
+    />
+
+    <LinkCard
+        title="Historical exchange rates"
+        href="/guides/i18n/"
+        description="Get a detailed `JSON` object of past exchange rates within a specified peiod."
+    />
+
+</CardGrid>
+
+## Supported currency codes
+
+AbstractAPI supports ISO 4217 currency codes which can be found [here](https://docs.abstractapi.com/exchange-rates#currency-codes-of-supported-currencies)
+
+## Get currency codes programmatically
+
+With `abstract-python` you can get the supported currency codes as a Python List. See usage below:
+
+```python
+from abstract_python import EXCHANGE_SUPPORTED_CURRENCIES
+
+print(EXCHANGE_SUPPORTED_CURRENCIES)
+```
+
+Here is the result below:
+
+```python
+>>> [
+    "ARS", "AUD", "BCH", "BGN", "BNB", "BRL", "BTC", "CAD", "CHF", "CNY",
+    "CYP", "CZK", "DKK", "DOGE", "DZD", "EEK", "ETH", "EUR", "GBP", "GRD",
+    "HKD", "HRK", "HUF", "IDR", "ILS", "INR", "ISK", "JPY", "KRW", "LTC",
+    "LTL", "LVL", "MAD", "MTL", "MXN", "MYR", "NOK", "NZD", "PHP", "PLN",
+    "RON", "RUB", "SEK", "SGD", "SIT", "SKK", "THB", "TRY", "TWD", "USD",
+    "XRP", "ZAR"
+    ]
+```
+
+### Use case
+
+If your app receives currency codes from users, you may need to validate these inputs before querying the `ExchangeRatesAPI` class.
+
+See usage below:
+
+```python
+from abstract_python import EXCHANGE_SUPPORTED_CURRENCIES
+
+base_currency = input("Enter a currency code")
+
+if base_currency in EXCHANGE_SUPPORTED_CURRENCIES:
+    # continue with the app logic
+else:
+    print(f"{base_currency} is not a supported currency code")
+```
+
+The code above is a simple console-based program. This technique can also be extended to other programs such as a web app or desktop app.
+
+## Error messages
+
+Refer to [this page](https://docs.abstractapi.com/exchange-rates#response-and-error-codes) for all possible error messages you may encounter while using the `ExchangeRatesAPI` class.

@@ -1,0 +1,82 @@
+---
+title: Calculate VAT.
+description: "This endpoint allows you to calculate VAT on the prices of goods in a particular country."
+---
+
+## Description
+
+The `VatAPI.calculate()` method is used to communicate with this endpoint as seen below:
+
+`VatAPI.calculate(amount, country_code, Optional[is_vat_incl, vat_category])`
+
+## Usage
+
+Below is a code snippet to query the `VatAPI.calculate()` method:
+
+```python
+from abstract_python import VatAPI
+
+api_key = "your-vat-api-key"
+
+api = VatAPI(api_key)
+amount = "50"
+country_code = "BE"
+response = api.calculate(amount, country_code)
+
+print(response)
+
+```
+
+Below is the response object:
+
+```
+{
+    'amount_excluding_vat': '50.00',
+    'amount_including_vat': '60.50',
+    'vat_amount': '10.50',
+    'vat_category': 'standard',
+    'vat_rate': '0.210',
+    'country': {
+        'code': 'BE',
+        'name': 'Belgium'
+    },
+    'status': 200
+}
+```
+
+## Using optional arguments
+
+Below is a code snippet on how to use optional arguments in the `VatAPI.calculate()` method:
+
+```python
+from abstract_python import VatAPI
+
+api_key = "your-vat-api-key"
+
+api = VatAPI(api_key)
+amount = "50"
+country_code = "BE"
+is_vat_incl = True
+vat_category = "standard"
+response = api.calculate(amount, country_code)
+
+print(response)
+
+```
+
+Below is the response object:
+
+```
+{
+    'amount_excluding_vat': '50.00',
+    'amount_including_vat': '60.50',
+    'vat_amount': '10.50',
+    'vat_category': 'standard',
+    'vat_rate': '0.210',
+    'country': {
+        'code': 'BE',
+        'name': 'Belgium'
+    },
+    'status': 200
+}
+```

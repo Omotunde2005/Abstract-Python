@@ -1,31 +1,31 @@
 ---
 title: "Authentication"
-description: "Learn how to authenticate with the API"
+description: "How to authenticate with `abstract-python` SDK"
 ---
 
-import { Steps } from "@astrojs/starlight/components";
+import { Steps, Aside } from "@astrojs/starlight/components";
 
-[AbstractAPI](https://www.abstractapi.com/) provides one key per API for authentication. Proceed to the [signup page](https://app.abstractapi.com/users/signup) to create an account, then retrieve your API keys from the dashboard.
+[AbstractAPI](https://www.abstractapi.com/) provides one api-key per API for authentication. Proceed to the [signup page](https://app.abstractapi.com/users/signup) to create an account, then retrieve your api-keys from the dashboard.
 
-## How to obtain an API key
+## How to get an api-key
 
-Locate an API key for an API through the steps below:
+Locate the api-key for an API through the steps below:
 
 <Steps>
 
-1. Import the component into your MDX file:
-
-   Hover around the left corner of your dashboard
+1. Hover around the left corner of your dashboard
 
 2. Select an API from the list
 
-3. An API key for the selected API will be displayed on the new page. For example: `Primary key: "6f2e9012d48f4e0bac70283244ade5e4"`.
+3. An api-key for the selected API will be displayed on the new page. For example: `Primary key: "6f2e9012d48f4e0bac70283244ade5e4"`.
 
 </Steps>
 
-## How to authenticate with an API key
+<Aside>The above api-key is invalid.</Aside>
 
-Each API class in `abstract-python` requires an `api_key` to send queries. The key must belong to
+## How to use an api-key
+
+Each API class in `abstract-python` requires an api_key to send queries. The key must belong to
 the API you intend to use. Below is a snippet on how to use an api-key:
 
 ```python

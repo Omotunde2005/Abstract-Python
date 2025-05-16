@@ -1,0 +1,75 @@
+---
+title: Convert currency.
+description: "This endpoint allows you to convert a specific amount of a currency to another currency."
+---
+
+## Description
+
+The `ExchangeRatesAPI.convert()` method is used to communicate with this endpoint as seen below:
+
+`ExchangeRatesAPI.convert(base, target, Optional[date, base_amount])`
+
+## Usage
+
+Below is a code snippet to query the `ExchangeRatesAPI.convert()` method:
+
+```python
+from abstract_python import ExchangeRatesAPI
+
+api_key = "your-exchange-rates-api-key"
+
+api = ExchangeRatesAPI(api_key)
+base = "GBP"
+target = "USD"
+response = api.convert(base, target)
+
+print(response)
+
+```
+
+Below is the response object:
+
+```
+{
+    'base': 'GBP',
+    'target': 'USD',
+    'base_amount': 1,
+    'converted_amount': 1.340148,
+    'exchange_rate': 1.340148,
+    'last_updated': 1727615700,
+    'status': 200
+}
+```
+
+## Using optional parameters
+
+Below is a code snippet that uses the optional parameters:
+
+```python
+from abstract_python import ExchangeRatesAPI
+
+api_key = "your-exchange-rates-api-key"
+
+api = ExchangeRatesAPI(api_key)
+base = "GBP"
+target = "USD"
+date = "2024-02-10"
+base_amount = 5.0
+response = api.convert(base, target, base_amount=base_amount, date=date)
+
+print(response)
+
+```
+
+Below is the response object:
+
+```
+{
+    'base': 'GBP',
+    'target': 'USD',
+    'base_amount': 5,
+    'converted_amount': 6.303839,
+    'exchange_rate': 1.260768,
+    'date': '2024-02-10',
+    'status': 200}
+```

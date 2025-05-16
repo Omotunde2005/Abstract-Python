@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
+
 export default defineConfig({
 	integrations: [
 		starlight({
@@ -18,6 +18,37 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Installation', slug: 'getting_started' },
 						{ label: 'Authentication', slug: 'authentication' },
+						{ label: 'Usage', slug: 'usage'}
+					],
+				},
+
+				{
+					label: 'Exchange',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Overview', slug: 'exchange/overview' },
+						{ label: 'Live Exchange', slug: 'exchange/live' },
+						{ label: 'Currency conversion', slug: 'exchange/conversion'},
+						{ label: 'Historical Exchange', slug: 'exchange/historical'},
+					],
+				},
+
+				{
+					label: 'IP/Geolocation',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Usage', slug: 'ip/ip_api' }
+					],
+				},
+
+				{
+					label: 'Value Added Tax (VAT)',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Overview', slug: 'vat/overview' },
+						{ label: 'Validate VAT', slug: 'vat/validate' },
+						{ label: 'Calculate VAT', slug: 'vat/calculate' },
+						{ label: 'VAT categories', slug: 'vat/vat_categories' },
 					],
 				},
 			],

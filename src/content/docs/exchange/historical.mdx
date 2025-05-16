@@ -1,0 +1,88 @@
+---
+title: Historical Exchange.
+description: "This endpoint allows you to get exchange rates record for a specific date"
+---
+
+## Description
+
+The `ExchangeRatesAPI.historical()` method is used to communicate with this endpoint as seen below:
+
+`ExchangeRatesAPI.historical(base, date, Optional[target])`
+
+## Usage
+
+Below is a code snippet to query the `ExchangeRatesAPI.historical()` method:
+
+```python
+from abstract_python import ExchangeRatesAPI
+
+api_key = "your-exchange-rates-api-key"
+
+api = ExchangeRatesAPI(api_key)
+base = "GBP"
+date = "2024-02-10"
+response = api.historical(base, date)
+
+print(response)
+
+```
+
+Below is the response object:
+
+```
+{
+    'base': 'GBP',
+    'date': '2024-02-10',
+    'exchange_rates': {
+        'EUR': 1.170412,
+        'USD': 1.260768,
+        'JPY': 188.43633,
+        'BGN': 2.289092,
+        'CZK': 29.46161,
+        'DKK': 8.723783,
+        'HUF': 454.096442,
+        'PLN': 5.056882,
+        'RON': 5.825492,
+        'SEK': 13.204003,
+        'CHF': 1.103933,
+        'ISK': 173.338015,
+        'NOK': 13.341526,
+        'TRY': 38.684106,
+        'AUD': 1.936213,
+        'BRL': 6.277739
+    },
+    'status': 200}
+```
+
+### Limit response fields
+
+You can limit the response by specifying a comma-separated list of target currency codes in your query.  
+Below is a code snippet to limit response data:
+
+```python
+from abstract_python import ExchangeRatesAPI
+
+api_key = "your-exchange-rates-api-key"
+
+api = ExchangeRatesAPI(api_key)
+
+base = "GBP"
+date = "2024-02-10"
+target = "EUR,USD,JPY"
+response = api.historical(base, date, target=target)
+
+```
+
+Below is the response object:
+
+```
+{
+    'base': 'GBP',
+    'date': '2024-02-10',
+    'exchange_rates': {
+        'EUR': 1.170412,
+        'USD': 1.260768,
+        'JPY': 188.43633
+    },
+    'status': 200}
+```
