@@ -5,9 +5,11 @@ description: "How to authenticate with `abstract-python` SDK"
 
 import { Steps, Aside } from "@astrojs/starlight/components";
 
-[AbstractAPI](https://www.abstractapi.com/) provides one api-key per API for authentication. Proceed to the [signup page](https://app.abstractapi.com/users/signup) to create an account, then retrieve your api-keys from the dashboard.
+[Abstract API](https://www.abstractapi.com/) provides a single api-key per API. [Create an account](https://app.abstractapi.com/users/signup) to retrieve your api-keys from the dashboard.
 
 ## How to get an api-key
+
+![How to get an api-key from your Abstract API dashboard](../../assets/abstract_key.png)
 
 Locate the api-key for an API through the steps below:
 
@@ -25,7 +27,7 @@ Locate the api-key for an API through the steps below:
 
 ## How to use an api-key
 
-Each API class in `abstract-python` requires an api_key to send queries. The key must belong to
+Each module in `abstract-python` requires an api-key to send queries. The key must belong to
 the API you intend to use. Below is a snippet on how to use an api-key:
 
 ```python

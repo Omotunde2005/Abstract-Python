@@ -21,9 +21,8 @@ export default defineConfig({
                   label: 'Getting started',
                   items: [
                       // Each item here is one entry in the navigation menu.
-                      { label: 'Installation', slug: 'getting_started' },
-                      { label: 'Authentication', slug: 'authentication' },
-                      { label: 'Usage', slug: 'usage'}
+                      { label: 'Quickstart', slug: 'getting_started' },
+                      { label: 'Authentication', slug: 'authentication' }
                   ],
               },
 

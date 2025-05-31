@@ -5,7 +5,7 @@ description: "The Vat API allows you to calculate the value added tax (VAT) on s
 
 import { CardGrid, LinkCard } from "@astrojs/starlight/components";
 
-The Vat API can be used to calculate VATs on goods, validate a company's VAT number, and get the latest VAT rates for product categories in a country.
+The VAT API can be used to calculate Value added tax (VAT) on goods, validate a company's VAT number, and get the latest VAT rates for product categories in a country.
 In `abstract-python`, the `VatAPI` class is used to communicate with this API.
 
 ## Endpoints
@@ -14,19 +14,19 @@ In `abstract-python`, the `VatAPI` class is used to communicate with this API.
 
     <LinkCard
         title="Validate VAT"
-        href="/guides/i18n/"
+        href="/vat/validate/"
         description="Validate VAT numbers in your app."
     />
 
     <LinkCard
         title="Calculate VAT"
-        href="/guides/i18n/"
+        href="/vat/calculate/"
         description="Calculate the VAT fee on goods in a country."
     />
 
     <LinkCard
         title="VAT Categories"
-        href="/guides/i18n/"
+        href="/vat/vat_categories/"
         description="Get a detailed `JSON` object of product categories and their VAT fee in each country."
     />
 
@@ -36,7 +36,7 @@ In `abstract-python`, the `VatAPI` class is used to communicate with this API.
 
 AbstractAPI supports ISO 4217 currency codes for the VAT API which can be found [here](https://docs.abstractapi.com/vat-validation#country-codes)
 
-## Get currency codes
+### Get currency codes
 
 With `abstract-python` you can get the supported country codes as a Python List. See usage below:
 
@@ -74,7 +74,3 @@ else:
 ```
 
 The code above is a simple console-based program. This technique can also be extended to other programs such as a web app or desktop app.
-
-## Error messages
-
-Refer to [this page](https://docs.abstractapi.com/vat-validation#response-and-error-codes) for all possible error messages you may encounter while using the `VatAPI` class.

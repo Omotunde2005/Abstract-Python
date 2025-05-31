@@ -1,0 +1,26 @@
+Getting started
+        - Installation + Usage
+        - Authentication
+
+Others
+
+Advanced Sections
+        - Error handing
+        - Responses
+        - Troubleshooting 
+
+
+Audit
+
+A. Home page:
+
+- Add a diagram showing how abstract API intercepts the request.
+
+
+B. Add error messages page:
+
+## Error messages
+
+Refer to [this page](https://docs.abstractapi.com/exchange-rates#response-and-error-codes) for all possible error messages you may encounter while using the `ExchangeRatesAPI` class.
+
+C. Explain parameters after showing example usage

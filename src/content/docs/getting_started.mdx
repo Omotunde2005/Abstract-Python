@@ -6,18 +6,19 @@ description: "Welcome to the documentation for `abstract-python` library"
 import { Steps, Aside } from "@astrojs/starlight/components";
 
 The `abstract-python` library is a Python SDK for APIs by [AbstractAPI](https://www.abstractapi.com/). It has helper classes
-that enable Python developers use these APIs without having to know the endpoints off-hand.
+that allow Python developers integrate these APIs easily in their apps.
 
-It also does type validation on each request data before they're sent to the API server. This helps to manage credits, as each request costs a credit -
-whether successful or otherwise.
+It also does type validation on each request data before they're sent to Abstract's server. This helps to manage credits as each request whether successful or otherwise costs a credit.
 
-This SDK currrently supports the **[Exchange Rates API](https://docs.abstractapi.com/exchange-rates)**,
-**[IP Geolocation API](https://docs.abstractapi.com/ip-geolocation)**, and the **[VAT API](https://docs.abstractapi.com/vat-validation)**.
+This SDK currrently supports the following APIs:
+
+- **[Exchange Rates API](https://docs.abstractapi.com/exchange-rates)**
+- **[IP Geolocation API](https://docs.abstractapi.com/ip-geolocation)**
+- **[VAT API](https://docs.abstractapi.com/vat-validation)**.
 
 <Aside>
   This isn't an official SDK by AbstractAPI but safe to use by anyone.
 </Aside>
->
 
 ## Installation
 
@@ -25,21 +26,23 @@ Follow the steps below to install `abstract-python`:
 
 <Steps>
 
-1. Run the command below in your terminal to create a virtual environment
+1. **Create a virtual environment:**
+
+   Run the command below in your terminal to create a virtual environment
 
    ```bash
    virtualenv env
    ```
 
-2. Activate the virtual environment
+2. **Activate the virtual environment**:
 
-   **Windows - using command prompt:**
+   _Windows - using command prompt:_
 
    ```bash
    .\env\Scripts\activate\
    ```
 
-   **Unix/macOS using bash:**
+   _Unix/macOS using bash:_
 
    ```bash
    source ./env/bin/activate
@@ -52,3 +55,21 @@ Follow the steps below to install `abstract-python`:
    ```
 
 </Steps>
+
+## Example usage
+
+If your app uses two or more of the supported APIs, it's recommended to import the SDK as seen below:
+
+```python
+from abstract_python import *
+
+vatAPI = VatAPI()
+```
+
+Use the following format for single API usage:
+
+```python
+from abstract_python import VatAPI
+
+vatAPI = VatAPI()
+```
