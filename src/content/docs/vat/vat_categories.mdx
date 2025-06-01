@@ -5,13 +5,15 @@ description: "This endpoint allows you to get the latest VAT rates for certain p
 
 This endpoint allows you to get the latest VAT rates for certain product categories in a country.
 
-The `VatAPI.categories()` method is used to communicate with this endpoint as seen below:
+The `VatAPI.categories()` method is used to communicate with this endpoint.
 
-`VatAPI.categories(country_code)`
+## Method parameters
+
+- **country_code (String) \*required:** The two letter ISO 3166-1 alpha-2 code of the country in which the transaction was recorded.
 
 ## Usage
 
-Below is a code snippet to query the `VatAPI.categories()` method:
+Below is a code snippet that uses the `VatAPI.categories()` method:
 
 ```python
 from abstract_python import VatAPI

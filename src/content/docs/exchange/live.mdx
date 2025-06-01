@@ -7,13 +7,23 @@ The rate for which **USD** exchanges for **CAD** or **BRL**'
 This endpoint is used to get the latest rate at which a base currency exchanges with other currencies. For example,
 The rate at which **USD** exchanges for **CAD** or **BRL**.
 
-The `ExchangeRatesAPI.live()` method is used to communicate with this endpoint as seen below:
+The `ExchangeRatesAPI.live()` method is used to communicate with this endpoint.
 
-`ExchangeRatesAPI.live(base, Optional[target])`
+## Method parameters
+
+Below are the parameters for this method:
+
+- **base (_String_) \*required:** The **base currency** to get the latest exchange rates for, e.g GBP.
+  It must be a currency code supported by AbstractAPI
+
+- **target (_String_):** The target currency or currencies that the **base currency** is converted
+  into. A list of comma separated currency codes is also permitted, e.g
+  "target=USD,CAD,BRL". This will limit the response data to the specified
+  currency codes.
 
 ## Usage
 
-Below is a code snippet to query the `ExchangeRatesAPI.live()` method:
+Below is a code snippet that uses the `ExchangeRatesAPI.live()` method:
 
 ```python
 from abstract_python import ExchangeRatesAPI
@@ -71,8 +81,7 @@ Below is the response object:
 
 ### Limit response data
 
-You can limit the response data by specifying a comma-separated list of target currency codes in your query.  
-Below is a code snippet to limit response data:
+You can limit the response data by specifying a comma-separated list of target currency codes in your query. Below is a code snippet to limit response data:
 
 ```python
 from abstract_python import ExchangeRatesAPI

@@ -1,0 +1,41 @@
+---
+title: Error handling
+---
+
+Errors are unavoidable with dynamic user inputs. The `status` field in each response allows you to verify the
+state of your request. [Read more here](/advanced/errors)
+
+## Example
+
+Below is a sample code that shows you how to handle errors/exceptions from the API:
+
+```python
+from abstract_python import VatAPI
+...
+
+api_key = "your-vat-api-key"
+
+api = VatAPI(api_key)
+
+...
+
+
+def validate_vat(vat_number):
+    try:
+        response = api.validate(vat_number)
+    except TypeError:
+        # Return an error message e.g Only string characters are required not number
+    else:
+        status = response.get("status")
+        if status == 200 or status == 201:
+            # Return the response data
+
+        # Log the error or return error message to users.
+
+```
+
+The `validate_vat()` function accepts a vat_number argument which is a user input. This function uses the `VatAPI.validate()` method to validate a VAT number.
+It uses exception handling to manage the two error kinds that might occur in your app - **TypeError and JSON error messages**.
+
+This setup works with any Python app(mobile, desktop, web). Also, it can be used with all the API classes and their methods.
+Simply replace the required methods and API class where necessary.

@@ -5,13 +5,15 @@ description: "This endpoint allows you to validate a company's VAT number. It re
 
 This endpoint allows you to validate a company's VAT number. It returns the company's data if the VAT number is valid
 
-The `VatAPI.validate()` method is used to communicate with this endpoint as seen below:
+The `VatAPI.validate()` method is used to communicate with this endpoint
 
-`VatAPI.validate(vat_number)`
+## Method parameter
+
+- **vat_number (String) \*required:** The VAT number you want to validate.
 
 ## Usage
 
-Below is a code snippet to query the `VatAPI.validate()` method:
+Below is a code snippet that uses the `VatAPI.validate()` method:
 
 ```python
 from abstract_python import VatAPI
@@ -43,9 +45,7 @@ Below is the response object:
 }
 ```
 
-## Error response
-
-If you entered an invalid VAT number in the query, you will get an error message as seen below:
+If you enter an invalid VAT number in the query, you will get an error message like the one below:
 
 ```
 {

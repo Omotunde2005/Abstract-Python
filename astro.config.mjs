@@ -55,6 +55,16 @@ export default defineConfig({
                       { label: 'VAT categories', slug: 'vat/vat_categories' },
                   ],
               },
+
+              {
+                  label: 'Advanced',
+                  items: [
+                      // Each item here is one entry in the navigation menu.
+                      { label: 'Response object', slug: 'advanced/response_object' },
+                      { label: 'Errors', slug: 'advanced/errors' },
+                      { label: 'Handling errors', slug: 'advanced/handling_errors' },
+                  ],
+              },
           ],
       }),
 	],

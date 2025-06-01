@@ -1,0 +1,31 @@
+---
+title: Errors.
+---
+
+Errors in `abstract-python` are of two (2) types:
+
+- **Regular Python exceptions:**
+
+A common exception you will encounter is the `TypeError`, usually from wrong data types used in arguments.
+
+- **JSON error messages:**
+
+These are JSON objects with detailed description of the error. They are often self-explanatory.
+
+Below is a sample error message:
+
+```python
+// Authorization error
+
+{
+  "error": {
+    "message":"A validation error occurred.",
+    "code":"validation_error",
+    "details":{
+      "api_key":["This field may not be blank."],
+      "country_code":["\"fu\" is not a valid choice."]
+    }
+  },
+  "status": 401
+}
+```

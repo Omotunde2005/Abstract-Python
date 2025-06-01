@@ -5,13 +5,25 @@ description: "This endpoint allows you to convert a specific amount of a currenc
 
 This endpoint allows you to convert a specific amount of a currency to another currency
 
-The `ExchangeRatesAPI.convert()` method is used to communicate with this endpoint as seen below:
+The `ExchangeRatesAPI.convert()` method is used to communicate with this endpoint
 
-`ExchangeRatesAPI.convert(base, target, Optional[date, base_amount])`
+## Method parameters
+
+Below are the parameters for this method:
+
+- **base (_String_) \*required:** The **base currency** to get the latest exchange rates for, e.g GBP.
+  It must be a currency code supported by AbstractAPI
+
+- **target (_String_) \*required:** The target currency to convert a base currency into. Only one target currency is permitted per request.
+
+- **date (_String_):** An historical date that the response must refer to. This parameter should be used if you want to get past exchange rates records. If blank, the response will be
+  based on live rates. The acceptable date format is: YYYY-MM-DD, e.g 2005-02-30.
+
+- **base_amount (Float):** A specific amount of the base currency to be converted.
 
 ## Usage
 
-Below is a code snippet to query the `ExchangeRatesAPI.convert()` method:
+Below is a code snippet that uses the `ExchangeRatesAPI.convert()` method:
 
 ```python
 from abstract_python import ExchangeRatesAPI
