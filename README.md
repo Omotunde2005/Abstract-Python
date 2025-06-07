@@ -1,54 +1,36 @@
-# Starlight Starter Kit: Basics
+## Overview
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+The `abstract-python` library is a Python SDK for APIs by [AbstractAPI](https://www.abstractapi.com/).
+It has helper classes that allow Python developers integrate these APIs easily in their apps. Read the documentation [here](https://abstract-python.vercel.app/).
 
-```
-npm create astro@latest -- --template starlight
-```
+It currently supports the following APIs:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+- [Exchange Rates API](https://docs.abstractapi.com/exchange-rates)
+- [IP Geolocation API](https://docs.abstractapi.com/ip-geolocation)
+- [VAT API](https://docs.abstractapi.com/vat-validation)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Installation
 
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+pip install abstract-python
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Usage
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```python
+from abstract_python import *
 
-Static assets, like favicons, can be placed in the `public/` directory.
+vatAPI = VatAPI()
+```
 
-## 🧞 Commands
+## Technologies
 
-All commands are run from the root of the project, from a terminal:
+The following technologies were used in developing this documentation:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Astro-starlight**: The `abstract-python` documentation was built using Astro-starlight.
+- **Vale**: Used for documentation linting and style-guide enforcement
+- **Vercel**: Used for deploying the documentation
 
-## 👀 Want to learn more?
+## To run it locally - Installation, Local development
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+## Contribute
