@@ -31,6 +31,22 @@ The following technologies were used in developing this documentation:
 - **Vale**: Used for documentation linting and style-guide enforcement
 - **Vercel**: Used for deploying the documentation
 
-## To run it locally - Installation, Local development
-
 ## Contribute
+
+Want to contribute to this documentation? Open an issue and the task will be assigned to you.
+
+## Local Development
+
+### Installation
+
+```bash
+npm install
+```
+
+### Start the local server
+
+```bash
+npm run dev
+```
+
+Open the url in the terminal to view the documentation locally.
