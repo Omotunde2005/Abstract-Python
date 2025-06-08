@@ -15,7 +15,7 @@ The `IpAPI.ip_info()` method is used to get Ip address info.
 
 Below are the parameters for this method:
 
-- **ip_address (String):** The ip_address you want to get location data for. The IpAPI supports both IPv4 and IPv6 addresses.
+- **ip_address (String):** The ip address you want to get location data for. The IP API supports both IPv4 and IPv6 addresses.
   If this field is left blank, the response will contain the location data of the IP address from which the request was made from.
 
 - **fields (_String_):** This parameter is used to limit the response to a few fields. For instance, you may prefer the response to only contain the country, city and region.
@@ -30,7 +30,7 @@ from abstract_python import IpAPI
 
 api_key = "your-ip-api-key"
 
-api = IpAPI(IP_API_KEY)
+api = IpAPI(api_key)
 print(ip.ip_info())
 ```
 
@@ -91,7 +91,7 @@ from abstract_python import IpAPI
 api_key = "your-ip-api-key"
 ip_address = "105.113.58.23"
 
-api = IpAPI(IP_API_KEY)
+api = IpAPI(api_key)
 print(ip.ip_info(ip_address))
 ```
 
@@ -143,7 +143,7 @@ api_key = "your-ip-api-key"
 ip_address = "105.113.58.23"
 fields = "ip_address, city, region, region_geoname_id, country"
 
-api = IpAPI(IP_API_KEY)
+api = IpAPI(api_key)
 print(ip.ip_info(ip_address, fields=fields))
 ```
 
