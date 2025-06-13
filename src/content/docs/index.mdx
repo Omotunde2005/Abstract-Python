@@ -13,6 +13,7 @@ hero:
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
+import Analytics from "@vercel/analytics/astro";
 
 ## Next steps
 
@@ -25,3 +26,5 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
     Learn [how to authenticate](/authentication) with the SDK.
   </Card>
 </CardGrid>
+
+<Analytics mode="production" />
