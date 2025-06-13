@@ -31,7 +31,7 @@ from abstract_python import IpAPI
 api_key = "your-ip-api-key"
 
 api = IpAPI(api_key)
-print(ip.ip_info())
+print(api.ip_info())
 ```
 
 Below is the response object:
@@ -92,7 +92,7 @@ api_key = "your-ip-api-key"
 ip_address = "105.113.58.23"
 
 api = IpAPI(api_key)
-print(ip.ip_info(ip_address))
+print(api.ip_info(ip_address=ip_address))
 ```
 
 The code above uses the IP address in the previous response. Below is the response object for the code above:
@@ -144,7 +144,7 @@ ip_address = "105.113.58.23"
 fields = "ip_address, city, region, region_geoname_id, country"
 
 api = IpAPI(api_key)
-print(ip.ip_info(ip_address, fields=fields))
+print(api.ip_info(ip_address=ip_address, fields=fields))
 ```
 
 Below is the response object:
