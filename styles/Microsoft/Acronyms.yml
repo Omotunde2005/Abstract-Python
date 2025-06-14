@@ -63,3 +63,8 @@ exceptions:
   - XSS
   - YAML
   - ZIP
+  - ISO
+  - USD
+  - CAD
+  - BRL
+  - GBP

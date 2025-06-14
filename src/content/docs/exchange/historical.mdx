@@ -1,11 +1,11 @@
 ---
 title: Historical Exchange.
-description: "This endpoint allows you to get exchange rates record for a specific date"
+description: "This endpoint lets you to get exchange rates record for a specific date"
 ---
 
-This endpoint allows you to get exchange rates record for a specific date.
+This endpoint lets you to get exchange rates record for a specific date.
 
-The `ExchangeRatesAPI.historical()` method is used to communicate with this endpoint.
+This endpoint uses the `ExchangeRatesAPI.historical()` method.
 
 ## Method parameters
 
@@ -14,10 +14,10 @@ Below are the parameters for this method:
 - **base (_String_) \*required:** The base currency to be converted. It must be a currency code supported by AbstractAPI.
 
 - **date (_String_) \*required:** A specific date in the past that the response must refer to. The acceptable
-  date format is: YYYY-MM-DD, e.g 2005-02-30.
+  date format is: `YYYY-MM-DD`, e.g `2005-02-30`
 
 - **target (_String_):** The target currency or currencies that the **base currency** is converted
-  into. A list of comma separated currency codes is also permitted, e.g "target=USD,CAD,BRL".
+  into. A list of comma separated currency codes is also permitted, e.g `target=USD,CAD,BRL`.
   This argument will limit the response data to the selected currencies
 
 ## Usage

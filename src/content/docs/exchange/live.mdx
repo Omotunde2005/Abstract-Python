@@ -7,7 +7,7 @@ The rate for which **USD** exchanges for **CAD** or **BRL**'
 This endpoint is used to get the latest rate at which a base currency exchanges with other currencies. For example,
 The rate at which **USD** exchanges for **CAD** or **BRL**.
 
-The `ExchangeRatesAPI.live()` method is used to communicate with this endpoint.
+This endpoint uses the `ExchangeRatesAPI.live()` method.
 
 ## Method parameters
 
@@ -18,7 +18,7 @@ Below are the parameters for this method:
 
 - **target (_String_):** The target currency or currencies that the **base currency** is converted
   into. A list of comma separated currency codes is also permitted, e.g
-  "target=USD,CAD,BRL". This will limit the response data to the specified
+  `target=USD,CAD,BRL`. This will limit the response data to the specified
   currency codes.
 
 ## Usage
